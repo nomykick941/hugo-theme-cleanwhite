@@ -377,7 +377,7 @@
 {{ if eq (.Param "multilingual") true }}
 <script type="text/javascript">
     // get nodes
-    var $zh = document.querySelector(".zh");
+    var $ja = document.querySelector(".ja");
     var $en = document.querySelector(".en");
     var $select = document.querySelector("select");
 
@@ -398,13 +398,13 @@
             $select.selectedIndex = 1;
             $en.style.display = "block";
             $en.classList.add("active");
-            $zh.style.display = "none";
-            $zh.classList.remove("active");
+            $ja.style.display = "none";
+            $ja.classList.remove("active");
             // default to ja-jp
         } else {
             $select.selectedIndex = 0;
-            $zh.style.display = "block";
-            $zh.classList.add("active");
+            $ja.style.display = "block";
+            $ja.classList.add("active");
             $en.style.display = "none";
             $en.classList.remove("active");
         }
@@ -415,7 +415,7 @@
     // handle select change
     function onLanChange(index) {
         if (index == 0) {
-            lang = "zh"
+            lang = "ja"
         } else {
             lang = "en"
         }
